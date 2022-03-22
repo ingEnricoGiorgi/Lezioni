@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
+Presa
+in esame la classe «Persona», si desidera realizzare un contatore che conti
+quante volte viene istanziata la classe, e per ogni volta stampi in output il valore
+Un
+tipo di problema di questo tipo non può essere risolto se non si fa uso
+dell’operatore STATIC
 -->
-<html>
     <head>
         <meta charset="UTF-8">
         <title></title>
@@ -43,9 +46,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             
             $Persona3 = new Persona($nome3, $cognome3, $eta3, $interessi3);
             echo "<br> La classe 'Persona' è stata istanziata n. ".$Persona3->getInstancesOfPersona()." volte.<br><br>";
-                                    
-            $Studente1 = new Studente($nome4, $cognome4, $eta4, $interessi4);
-            echo "<br> La classe 'Studente' è stata istanziata n. ".Studente::getInstancesOfStudente()." volte.<br><br>";
+
+            $Persona3 = new Persona($nome3, $cognome3, $eta3, $interessi3);
+            echo "<br> La classe 'Persona' è stata istanziata n. ".Persona::getInstancesOfPersona()." volte.<br><br>";
+             
+            
+           // $Studente1 = new Studente($nome4, $cognome4, $eta4, $interessi4);
+           // echo "<br> La classe 'Studente' è stata istanziata n. ".Studente::getInstancesOfStudente()." volte.<br><br>";
         ?>
     </body>
 </html>
