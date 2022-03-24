@@ -17,6 +17,11 @@ public function __construct(){
 public function setIndStudio($ind_studio){
     $this->ind_studio = $ind_studio;
 }
+
+public function getIndStudio(){
+    return $this->ind_studio;
+}
+
 public function getPagBenvenutoStud(){
     $saluto_persona=$this->getPagBenvenuto();
     // $saluto_persona=parent::getPagBenvenuto();
