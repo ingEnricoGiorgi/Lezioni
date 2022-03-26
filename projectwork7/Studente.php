@@ -21,9 +21,12 @@ public function setIndStudio($ind_studio){
 public function getIndStudio(){
     return $this->ind_studio;
 }
+public function saluto(){
+    return parent::$ciao;
+}
 
-public function getPagBenvenutoStud(){
-    $saluto_persona=$this->getPagBenvenuto();
+public function getPagBenvenuto(){
+    $saluto_persona=parent::getPagBenvenuto();
     // $saluto_persona=parent::getPagBenvenuto();
     if($this->sesso === "M" || $this->sesso === "m" || $this->sesso === ""){
        return $saluto_persona." uno studente che frequenta: ".$this->ind_studio."<br>";

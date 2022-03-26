@@ -13,6 +13,7 @@ private $cognome="";
 private $eta="";
 private $interessi="";
 private $saluto="";
+public $ciao="ciao";
 
 public function __construct($nome,$cognome,$eta,$interessi){
     $this->nome=$nome;

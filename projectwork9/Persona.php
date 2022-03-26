@@ -7,12 +7,13 @@
  */
 class Persona {
     //Proprietà
-    private $nome = "";     
-    private $cognome = "";
-    private $eta = "";
-    private $interessi = "";    
-    private $saluto = "";
-   
+    public $nome = "";     
+    public $cognome = "";
+    public $eta = "";
+    public $interessi = "";    
+    public $saluto = "";
+    private static $numIstanze = 0;
+    private static $numIstanzeIndiretta = 0;
     
     //costruttore
     public function __construct($nome,$cognome,$eta,$interessi) {
@@ -22,17 +23,12 @@ class Persona {
         $this->eta = $eta;
         $this->interessi = $interessi;
         $this->saluto = "Buongiorno sono ".$nome." ".$cognome;
-       
+        
+        self::$numIstanze++;
     }
 
-    public function setProfile($nome,$cognome,$eta,$interessi) {
-        //inizializzazione
-        $this->nome = $nome; 
-        $this->cognome = $cognome;
-        $this->eta = $eta;
-        $this->interessi = $interessi;
-        $this->saluto = "Buongiorno sono ".$nome." ".$cognome;
-       
+    protected function setIstances(){
+        self::$numIstanzeIndiretta++;
     }
     
     //metodo che restituisce la pagina di saluto
@@ -40,6 +36,15 @@ class Persona {
          return $this->saluto;
     } 
     
-   
+    //restituisce il numero di volte che è stato chiamato il costruttore 
+    public static function getInstancesOfPersona() {
+        //return self::$numIstanze;
+        return Persona::$numIstanze;
+    }  
+    
+    public static function getInstancesOfTotale() {
+       
+        return Persona::$numIstanze+self::$numIstanzeIndiretta;
+    }  
 }
 ?>

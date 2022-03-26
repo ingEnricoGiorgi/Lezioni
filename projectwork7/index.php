@@ -30,8 +30,8 @@
     $Studente2= new Studente($nome2,$cognome2,$eta2,$interessi2, "F");
     $Studente2->setIndStudio("Twitch");
        
-    echo "SALUTO DI STUDENTE1 <br>".$Studente1->getPagBenvenutoStud();
-    echo "<br><br>SALUTO DI STUDENTE2 <br>".$Studente2->getPagBenvenutoStud();
+    echo "SALUTO DI STUDENTE1 <br>".$Studente1->getPagBenvenuto();
+    echo "<br><br>SALUTO DI STUDENTE2 <br>".$Studente2->getPagBenvenuto();
  
    ?>
 </body>

@@ -17,9 +17,9 @@ public function __construct(){
 public function setIndStudio($ind_studio){
     $this->ind_studio = $ind_studio;
 }
-public function getPagBenvenutoStud(){
-    $saluto_persona=$this->getPagBenvenuto();
-    // $saluto_persona=parent::getPagBenvenuto();
+public function getPagBenvenuto(){
+    //$saluto_persona=$this->getPagBenvenuto();
+     $saluto_persona=parent::getPagBenvenuto();
     if($this->sesso === "M" || $this->sesso === "m" || $this->sesso === ""){
        return $saluto_persona." uno studente che frequenta: ".$this->ind_studio."<br>";
     }elseif($this->sesso === "F" || $this->sesso === "f"){
@@ -27,16 +27,8 @@ public function getPagBenvenutoStud(){
     }
     
 }
-/*Fatal error: Cannot override final method 
-Persona::getPagBenvenuto() 
-in D:\xampp\htdocs\php 
-penserini\Lezioni\projectwork12\Studente.php on line 30
 
-*/
-protected final function getPagBenvenuto(){
-    //no override
-    return parent::$saluto;
-}
+
 
 }
 ?>

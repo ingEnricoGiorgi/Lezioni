@@ -17,7 +17,7 @@ public function getStato(){
     return "Sono lo studente: $nomeS $cognomeS 
     ho $etaS anni e l'interesse per $interessiS il mio indirizzo di studio e: $this->ind_studio";
 }
-
+ 
 
 
 

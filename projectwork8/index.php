@@ -39,13 +39,13 @@ dell’operatore STATIC
 
             //CREO GLI OGGETTI "Persona1", "Persona2" e "Persona3"
             $Persona1 = new Persona($nome1, $cognome1, $eta1, $interessi1);
-            echo "<br> La classe 'Persona' è stata istanziata n. ".$Persona1->getInstancesOfPersona()." volte.";
+            echo "<br> La classe 'Persona' è stata istanziata n. ".Persona::getInstancesOfPersona()." volte.";
             
             $Persona2 = new Persona($nome2, $cognome2, $eta2, $interessi2);
-            echo "<br> La classe 'Persona' è stata istanziata n. ".$Persona2->getInstancesOfPersona()." volte.";
+            echo "<br> La classe 'Persona' è stata istanziata n. ".Persona::getInstancesOfPersona()." volte.";
             
             $Persona3 = new Persona($nome3, $cognome3, $eta3, $interessi3);
-            echo "<br> La classe 'Persona' è stata istanziata n. ".$Persona3->getInstancesOfPersona()." volte.<br><br>";
+            echo "<br> La classe 'Persona' è stata istanziata n. ".Persona::getInstancesOfPersona()." volte.<br><br>";
 
             $Persona3 = new Persona($nome3, $cognome3, $eta3, $interessi3);
             echo "<br> La classe 'Persona' è stata istanziata n. ".Persona::getInstancesOfPersona()." volte.<br><br>";

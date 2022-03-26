@@ -28,7 +28,11 @@ public function setProfile($nome,$cognome,$eta,$interessi){
         $this->interessi=$interessi;
         $this->saluto="SONO ".$nome." ".$cognome;
 }
-
+/*
+impostato protected final
+Fatal error: Cannot override 
+final method Persona::getPagBenvenuto()
+*/
 protected final function getPagBenvenuto(){
         //no override
         return $this->saluto;
