@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog_film>
+    <cd>
+        <titolo>Matrix</titolo>
+        <lingua>USA</lingua>
+        <regista>Lana</regista>
+        <costo>10€</costo>
+        <year>2022</year>
+    </cd>
+    <cd>
+        <titolo>La vita è bella</titolo>
+        <lingua>Italy</lingua>
+        <regista>Roberto benigni</regista>
+        <costo>15€</costo>
+        <year>1997</year>
+    </cd>
+</catalog_film>

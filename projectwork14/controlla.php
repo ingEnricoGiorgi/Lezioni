@@ -1,23 +1,40 @@
 <?php
-function checkCache(){
-   $oriFile="phpflow.xml";
-   $cache=file_get_contents($oriFile);
 
-   if((!apcu_exists('phpflow')) || apcu_fetch('phpflow')!= $cache){
-       echo "Inserisci il file modificato nelle cache";
-       echo "<br>";
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/PHPClass.php to edit this template
+ */
 
-       $cache = file_get_contents($oriFile);
-       apcu_store("phpflow", $cache, 0);
-       return $cache;
-   }else {
-       echo "continua ad usare il file.xml della cache";
-       echo "<br>";
-       print (apcu_fetch("phpflow"));
-   }
-  
+/**
+ * Description of Controlla
+ *
+ * @author elpen
+ */
+class Controlla extends AggiornaCache{
+    private $fileToCache = 'cache/phpflow.xml';
+    private $checkForNewFile = 'phpflow.xml';
+    //private bool $modificato = false;
+    
+    function __construct($checkForNewFile, $fileToCache){
+        $this->checkForNewFile = $checkForNewFile;
+        $this->fileToCache = $fileToCache;
+        parent::storeFile($fileToCache);
+    }
+    
+    function checkFile() {
+        //"< 10" si mette solamente per dare la possibilità di far vedere 
+        //didatticamente l'effetto di modifica del file...
+        if (!file_exists($this->fileToCache) || time() - filemtime($this->checkForNewFile) < 10){
+            //***IL FILE E' STATO MODIFICATO***
+            $cache = fopen($this->fileToCache, 'w+');
+            fwrite($cache, file_get_contents($this->checkForNewFile));
+            fclose($cache);
+            $rispostaCache = parent::updateCache($this->checkForNewFile);
+            return $rispostaCache; 
+        } else {
+            //FILE INVARIATO, QUINDI SI CONTINUA A LEGGERE DALLA CACHE
+            return "Nessuna modifica al file. Quindi, CACHE not updated!<br> -- Leggo cache: ".parent::readCache();             
+        }
+    } 
 }
-$checkCache=checkCache();
-echo $checkCache."!!";
-
 ?>

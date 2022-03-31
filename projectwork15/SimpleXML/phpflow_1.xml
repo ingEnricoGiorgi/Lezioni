@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo_film>
+  <cd>
+    <titolo>Matrix Resurrections</titolo>
+    <lingua>USA</lingua>
+    <regista>Lana Wachowski</regista>
+    <costo>10€</costo>
+    <year>2022</year>
+  </cd>
+  <cd>
+    <titolo>La vita è bella</titolo>
+    <lingua>Italy</lingua>
+    <regista>Roberto Benigni</regista>
+    <costo>15€</costo>
+    <year>1997</year>
+  </cd>
+</catalogo_film>

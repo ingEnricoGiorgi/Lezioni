@@ -4,7 +4,7 @@
   <welcome-file-list>
     <welcome-file>FILE1</welcome-file>
     <welcome-file>FILE2</welcome-file>
-    <welcome-file></welcome-file>
+    <welcome-file>file3</welcome-file>
     <welcome-file></welcome-file>
   </welcome-file-list>
 <!--  

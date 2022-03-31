@@ -22,6 +22,8 @@
     $interessi="programmare E-commerce";
 
     $Persona1= new Persona($nome,$cognome,$eta,$interessi);
+    echo "<br>".$Persona1->getPagBenvenuto()."<br>";
+
     $Studente1= new Studente($nome,$cognome,$eta,$interessi);
     $Studente1->setIndStudio("Ingegneria informatica");
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo_film>
+  <cd>
+    <titolo>Matrix Resurrections</titolo>
+    <attore>Keano Reeves</attore>
+    <nazione>USA</nazione>
+    <regista>Lana Wachowski</regista>
+    <budget>190 M$</budget>
+    <year>2022</year>
+  </cd>
+</catalogo_film>
